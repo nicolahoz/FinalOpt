@@ -1,0 +1,51 @@
+BreakDuration = 1;
+DayDuration = 8;
+MorningDiscipline = { "Ed Fisica" };
+NeedBreak =  { 
+   <"Matematica","Fisica">
+};
+TeacherDisciplineSet = { 
+   <"Juan", "Matematica">,
+   <"Fernando", "Ingles">,
+   <"Maria", "Economia">,
+   <"Pablo", "Fisica">,
+   <"Veronica", "Biologia">,
+   <"Patricia", "Ed Fisica">,
+   <"Jeronimo", "Historia">,
+   <"Laura", "Geografia">,
+   <"Laura", "Historia">,
+};                     
+DedicatedRoomSet = { <"Patio", "Ed Fisica">,
+                     <"Laboratorio", "Biologia">
+                   };                  
+Room = {"Aula 100", "Aula 101", "Aula 102", "Aula 103", "Aula 104", "Aula 105", "Patio", "Laboratorio" };
+NumberOfDaysPerPeriod = 5;
+RequirementSet = {
+  <"Primero","Biologia", 2, 2>,
+  <"Primero","Economia", 2, 2>,
+  <"Primero","Ingles", 2, 3>,
+  <"Primero","Geografia", 2, 2>,
+  <"Primero","Historia", 2, 2>,
+  <"Primero","Matematica", 2, 4>,
+  <"Primero","Fisica", 2, 2>,
+  <"Primero","Ed Fisica", 2, 2>,
+
+  <"Segundo","Biologia", 2, 3>,
+  <"Segundo","Economia", 2, 2>,
+  <"Segundo","Ingles", 2, 2>,
+  <"Segundo","Geografia", 2, 2>,
+  <"Segundo","Historia", 3, 2>,
+  <"Segundo","Matematica", 2, 2>,
+  <"Segundo","Fisica", 2, 2>,
+  <"Segundo","Ed Fisica", 2, 2>,
+
+  <"Tercero","Biologia", 2, 2>,
+  <"Tercero","Economia", 2, 2>,
+  <"Tercero","Ingles", 2, 2>,
+  <"Tercero","Geografia", 2, 3>,
+  <"Tercero","Historia", 2, 2>,
+  <"Tercero","Matematica", 3, 2>,
+  <"Tercero","Fisica", 2, 2>,
+  <"Tercero","Ed Fisica", 2, 2>
+};
+

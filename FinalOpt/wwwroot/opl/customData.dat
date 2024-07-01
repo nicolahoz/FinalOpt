@@ -1,0 +1,10 @@
+
+BreakDuration = 1;
+DayDuration = 8;
+NumberOfDaysPerPeriod = 5;
+NeedBreak = {};
+
+
+
+
+

@@ -1,0 +1,143 @@
+﻿@model FinalOpt.Models.IndexViewModel
+
+<section class="container-fluid mt-3 section-class">
+    <card id="card-content" class="card shadow mt-4 mb-4 d-flex justify-content-center align-items-center p-4 card-style">
+        <div class="scrollable-container" style="border: 1px solid #ccc; width: 90%">
+            <div class="stepper">
+                <div class="step" id="step-1">
+                    <h3>Agregar materias</h3>
+                    <div class="d-flex">
+                        <input class="form-control mt-3 mb-3 w-50" type="text" id="discipline-input" />
+                        <button class="btn mx-2" onclick="addDiscipline()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="discipline-list" class="d-flex flex-column">
+                        <h5>Materias agregadas:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button id="disciplines-next-button" onclick="renderDisciplineSelect()" disabled class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-2">
+                    <h3>Agregar profesores</h3>
+                    <div class="d-flex">
+                        <input class="form-control mt-3 mb-3 w-50" type="text" id="teacher-input" />
+                        <select id="discipline-select" class="form-select mt-3 mb-3 mx-2 w-50">
+                        </select>
+                        <button class="btn mx-2" onclick="addTeacher()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="teachers-list" class="d-flex flex-column">
+                        <h5>Maestros agregados:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button id="teacher-prev-button" class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="teacher-next-button" disabled class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-3">
+                    <h3>Agregar aulas/espacios</h3>
+                    <div class="d-flex">
+                        <input class="form-control mt-3 mb-3 w-50" type="text" id="room-input" />
+                        <button class="btn mx-2" onclick="addRoom()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="room-list" class="d-flex flex-column">
+                        <h5>Aulas agregadas:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="room-next-button" onclick="renderDedicatedRoomSelects()" disabled class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-4">
+                    <h3>Seleccionar aulas dedicadas</h3>
+                    <div class="d-flex">
+                        <select id="room-select" class="form-select mt-3 mb-3 mx-2 w-50"></select>
+                        <select id="room-discipline-select" class="form-select mt-3 mb-3 mx-2 w-50"></select>
+                        <button class="btn mx-2" onclick="addDedicatedRoom()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="dedicated-list" class="d-flex flex-column">
+                        <h5>Aulas dedicadas:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="dedicated-next-button" onclick="renderMorningSelect()" disabled class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-5">
+                    <h3>Seleccionar materia matutina</h3>
+                    <div class="d-flex">
+                        <select id="morning-select" class="form-select mt-3 mb-3 mx-2 w-50"></select>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="morning-next-button" onclick="morningNextButton()" class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-6">
+                    <h3>Agregar cursos</h3>
+                    <div class="d-flex">
+                        <input class="form-control mt-3 mb-3 w-50" type="text" id="course-input" />
+                        <button class="btn mx-2" onclick="addCourse()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="course-list" class="d-flex flex-column">
+                        <h5>Cursos agregados:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="course-next-button" onclick="renderRequirementSelect()" disabled class="btn next" style="border: 1px solid black;">Siguiente</button>
+                    </div>
+                </div>
+                <div class="step" id="step-7">
+                    <h3>Agregar requerimientos</h3>
+                    <div class="d-flex">
+                        <select id="requirement-course-select" class="form-select mt-3 mb-3 mx-2 w-50"></select>
+                        <select id="requirement-discipline-select" class="form-select mt-3 mb-3 mx-2 w-50"></select>
+                        <input class="form-control mx-2 mt-3 mb-3 w-50" type="text" id="daily-hours-input" />
+                        <input class="form-control mx-2 mt-3 mb-3 w-50" type="text" id="weekly-days-input" />
+                        <button class="btn mx-2" onclick="addRequirement()"><i class="fa fa-add"></i></button>
+                    </div>
+                    <div id="requirement-list" class="d-flex flex-column">
+                        <h5>Requerimientos agregados:</h5>
+                    </div>
+                    <div class="d-flex justify-content-end w-100">
+                        <button class="btn previous" style="border: 1px solid black; margin-right: 10px">Anterior</button>
+                        <button id="requirement-finish-button" onclick="handleFinish()" disabled class="btn finish" style="border: 1px solid black;">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="example-button" class="btn my-4" onclick="runExample()" style="border: 1px solid black;">Ejecutar ejemplo</button>
+        <p class="error-display" id="error-display"></p>
+        <span id="spinner" class="loader my-4"></span>
+        <div id="timer" class="timer">
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">000</span>
+        </div>
+    </card>
+</section>
+
+
+<script src="~/js/timer.js"></script>
+<script src="~/js/formHandler.js"></script>
+<script src="~/js/handleRunner.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var currentStep = 1;
+        showStep(currentStep);
+
+        function showStep(step) {
+            $('.step').removeClass('active');
+            $('#step-' + step).addClass('active');
+        }
+
+        $('.next').click(function () {
+            currentStep++;
+            showStep(currentStep);
+        });
+
+        $('.previous').click(function () {
+            currentStep--;
+            showStep(currentStep);
+        });
+    });
+</script>

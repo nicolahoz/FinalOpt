@@ -1,0 +1,160 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #515151;
+}
+
+.nav-style {
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.information-label {
+    color: grey;
+}
+
+.information-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: none;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card-style {
+    border-radius: 15px;
+}
+
+.section-class {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.display-error-message {
+    display: grid;
+    place-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.table-head {
+    background: #36304a;
+    color: #fff;
+}
+
+.table-container {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-style {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+    .table-style td {
+        padding: 10px
+    }
+
+.table-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-active {
+    background-color: #36304a;
+    border: none;
+    color: white;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    background: white;
+}
+
+.ui-tabs .ui-tabs-nav {
+    background: white;
+}
+
+.scrollable-container {
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.console-container {
+    display: block;
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    overflow: auto;
+    height: 600px;
+}
+
+.stepper {
+    display: flex;
+    flex-direction: column;
+}
+
+.step {
+    display: none;
+    padding: 20px;
+}
+
+    .step.active {
+        display: block;
+    }
+
+.error-display {
+    display: none;
+    color: red;
+}
+
+.timer {
+    color: darkblue;
+    font-size: 2em;
+    margin-bottom: 20px;
+    display: none;
+}

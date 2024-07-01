@@ -1,0 +1,60 @@
+﻿@model FinalOpt.Models.GetJobInfoResponse
+@using FinalOpt.Infraestructure.Helpers
+@using System.Reflection;
+@{
+    var inputDataDictionary = Helper.FromIbmDat(Model.entity.decision_optimization.input_data[1].content);
+    var outputData = "";
+    if (Model.entity.decision_optimization.output_data.Count > 0)
+    {
+        outputData = Model.entity.decision_optimization.output_data[0].content;
+    }   
+    var details = Model.entity.decision_optimization.solve_state.details;
+    PropertyInfo[] consoleInfo = details.GetType().GetProperties();
+}
+
+<section class="container-fluid mt-3 section-class">
+    <card id="card-content" class="card shadow mt-4 mb-4 d-flex justify-content-center align-items-center p-4 card-style">
+        <div class="w-100" id="tabs-details">
+            <ul>
+                <li><a href="#tab-1-details">Datos de entrada</a></li>
+                <li><a onclick="onClickAnchor('@outputData')" href="#tab-2-details">Solucion</a></li>
+                <li><a href="#tab-3-details">Consola</a></li>
+            </ul>
+            <div id="tab-1-details">
+                <div class="d-flex px-5 py-3 flex-wrap gap-5">
+                    @foreach (var item in inputDataDictionary)
+                    {
+                        <div class="information-display">
+                            <label class="information-label">@item.Key:</label>
+                            <div class="scrollable-container d-flex flex-column" style="max-height: 150px;">
+                                @foreach (var val in item.Value)
+                                {
+                                    <strong>@val</strong>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div id="tab-2-details" style="max-height: 90%"></div>
+            <div id="tab-3-details">
+                <card class="console-container">
+                    @foreach (var item in consoleInfo)
+                    {
+                        <h6>@item.Name : @item.GetValue(details)</h6>
+                    }
+                </card>
+            </div>
+        </div>
+    </card>
+</section>
+
+<script src="~/js/handleRunner.js"></script>
+<script src="~/js/onClickAnchor.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#tabs-details").tabs();
+    });
+</script>

@@ -1,0 +1,43 @@
+﻿@using Newtonsoft.Json;
+@model FinalOpt.Models.StorageModel
+
+<section class="container-fluid mt-3 section-class">
+    <card id="card-content" class="card shadow mt-4 mb-4 d-flex justify-content-center align-items-center p-4 card-style">
+        <div id="content" class="table-container">
+            <table class="table-style">
+                <thead class="table-head">
+                    <tr style="border-radius: 8px;">
+                        <td>Job Id</td>
+                        <td>Hora de creación</td>
+                        <td>Nombre</td>
+                        <td>Estado</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    @foreach (var job in Model.FinishedJobs)
+                    {
+                        var href = "/Tabling/GetDetailsView?jobId=" + job.JobId;
+
+                        <tr>
+                            <td>@job.JobId</td>
+                            <td>@string.Join(" ", job.CreatedAt.ToLocalTime().ToString().Split(' ').Take(2).ToArray())</td>
+                            <td>@job.JobName</td>
+                            <td style="text-align: center">
+                                @if (job.JobStatus == "completed")
+                                {
+                                    <i class="fa-solid fa-circle-check" style="color: green"></i>
+                                }
+                                else
+                                {
+                                    <i class="fa-solid fa-circle-xmark" style="color: red"></i>
+                                }
+                            </td>
+                            <td><a href="@href" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </card>
+</section>

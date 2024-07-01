@@ -1,0 +1,175 @@
+{
+  "Requirements": [
+    {
+      "Course": "Primero",
+      "Discipline": "Biologia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Economia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Ingles",
+      "DailyHours": 2,
+      "WeeklyDays": 3
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Geografia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Historia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Matematica",
+      "DailyHours": 2,
+      "WeeklyDays": 4
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Primero",
+      "Discipline": "Ed Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+
+    {
+      "Course": "Segundo",
+      "Discipline": "Biologia",
+      "DailyHours": 2,
+      "WeeklyDays": 3
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Economia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Ingles",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Geografia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Historia",
+      "DailyHours": 3,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Matematica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Segundo",
+      "Discipline": "Ed Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+
+    {
+      "Course": "Tercero",
+      "Discipline": "Biologia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Economia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Ingles",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Geografia",
+      "DailyHours": 2,
+      "WeeklyDays": 3
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Historia",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Matematica",
+      "DailyHours": 3,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    },
+    {
+      "Course": "Tercero",
+      "Discipline": "Ed Fisica",
+      "DailyHours": 2,
+      "WeeklyDays": 2
+    }
+  ],
+  "Disciplines": [
+    "Matematica",
+    "Historia",
+    "Ingles",
+    "Fisica",
+    "Ed Fisica",
+    "Geografia",
+    "Biologia",
+    "Economia"
+  ],
+  "Teachers": [
+    "Juan",
+    "Fernando",
+    "Maria",
+    "Pablo",
+    "Veronica",
+    "Patricia",
+    "Jeronimo",
+    "Laura"
+  ],
+  "Courses": [
+    "Primero",
+    "Segundo",
+    "Tercero"
+  ]
+}

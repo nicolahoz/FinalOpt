@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FinalOpt</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FinalOpt.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/jqueryui/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+</head>
+<body>
+    <header class="d-flex justify-content-center">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-1 nav-style">
+            <div class="container-fluid d-flex justify-content-center align-items-center">
+                <ul class="navbar-nav ml-auto px-5">
+                    <li class="nav-item">
+                        <a id="dropdownBtnId" href="/Tabling/SolveModel" class="nav-link text-dark" type="button"><i class="fa-solid fa-play" style="font-size: 1.2em;"></i> Resolver modelo</a>
+                    </li>
+                    <hr style="width: 1px; height: 10px; margin-left: 10px; margin-right: 10px">
+                    <li class="nav-item">
+                        <a id="dropdownBtnCalendar" href="/Tabling/History" class="nav-link text-dark" type="button"><i class="fa-solid fa-clock" style="font-size: 1.2em;"></i> Historial</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>     
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
